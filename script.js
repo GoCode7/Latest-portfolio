@@ -35,44 +35,69 @@ const btn = document.querySelector('.mobile-menu-button');
     });
 
   gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.create({
-      trigger: ".my-skills",
-      start: "top 100%",
-      onEnter: () => animateBox(),
-      onEnterBack: () => animateBox(),
-      onLeave: () => resetBox(),
-      onLeaveBack: () => resetBox(),
-    });
 
-    function animateBox() {
-      gsap.fromTo(".my-skills",
-        { y: 100, opacity: 0},
-        { y: 0, opacity: 1, duration: 4, ease: "power4.out" }
-      );
-    }
+// .content animation
+ScrollTrigger.create({
+  trigger: ".content",
+  start: "top 80%",
+  onEnter: animateContent,
+  onEnterBack: animateContent,
+  onLeave: resetContent,
+  onLeaveBack: resetContent,
+});
+function animateContent() {
+  gsap.fromTo(".content", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power4.out" });
+}
+function resetContent() {
+  gsap.set(".content", { y: 100, opacity: 0 });
+}
 
-    function resetBox() {
-      gsap.set(".my-skills", { y: 100, opacity: 0 });
-    }
+// .about-header animation
+ScrollTrigger.create({
+  trigger: ".about-header",
+  start: "top 80%",
+  onEnter: animateAbout,
+  onEnterBack: animateAbout,
+  onLeave: resetAbout,
+  onLeaveBack: resetAbout,
+});
+function animateAbout() {
+  gsap.fromTo(".about-header", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 4, ease: "power4.out" });
+}
+function resetAbout() {
+  gsap.set(".about-header", { y: 100, opacity: 0 });
+}
 
-    // ScrollTrigger.create({
-    //   trigger: ".content",
-    //   start: "top 100%",
-    //   onEnter: () => anmateBox(),
-    //   onEnterBack: () => anmateBox(),
-    //   onLeave: () => resetBox(),
-    //   onLeaveBack: () => resetBox(),
-    // });
+// .mySwiper animation
+ScrollTrigger.create({
+  trigger: ".mySwiper",
+  start: "top 80%",
+  onEnter: animateSwiper,
+  onEnterBack: animateSwiper,
+  onLeave: resetSwiper,
+  onLeaveBack: resetSwiper,
+});
+function animateSwiper() {
+  gsap.fromTo(".mySwiper", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 4, ease: "power4.out" });
+}
+function resetSwiper() {
+  gsap.set(".mySwiper", { y: 100, opacity: 0 });
+}
 
-    // function anmateBox() {
-    //   gsap.fromTo(".content",
-    //     { y: 100, opacity: 0 },
-    //     { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
-    //   );
-    // }
-
-    // function resetBox() {
-    //   gsap.set(".content", { y: 100, opacity: 0 });
-    // }
+// .my-skills animation
+ScrollTrigger.create({
+  trigger: ".my-skills",
+  start: "top 80%",
+  onEnter: animateSkills,
+  onEnterBack: animateSkills,
+  onLeave: resetSkills,
+  onLeaveBack: resetSkills,
+});
+function animateSkills() {
+  gsap.fromTo(".my-skills", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 4, ease: "power4.out" });
+}
+function resetSkills() {
+  gsap.set(".my-skills", { y: 100, opacity: 0 });
+}
 
     
