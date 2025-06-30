@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=~, initial-scale=1.0" />
+    
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -24,18 +25,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>My Folio</title>
   </head>
-  <body class="bg-[#ffff] py-5 px-10">
+  <body class="bg-[#ffff] py-5 px-10 text-[#323232]">
     <header class="md:justify-between md:items-center">
       <div class="flex justify-between items-center">
         <div>
-          <h2
-            class="text-[30px] font-[900] text-[#323232] font-[Dancing_Script]"
-          >
-            Aluko Jesutofunmi
-          </h2>
+          <h2><a href="index.html" class="text-[30px] font-[900] font-[Dancing_Script]">Aluko Jesutofunmi</a></h2>
         </div>
         <nav class="flex">
-          <div class="hidden md:flex md:gap-5 md:text-[#323232]">
+          <div class="hidden md:flex md:gap-5">
             <div>
               <a href="#" class="text-xl font-[400] border-black border-b-3"
                 >About</a
@@ -65,7 +62,7 @@
         </div>
       </div>
     </header>
-    <main class="text-[#323232]">
+    <main class="">
       <div class="text-center mt-5 mb-5 md:mb-10 md:mt-10">
         <h1
           class="font-[Dancing_Script] text-[45px] font-[700] md:text-[70px] md:font-[900]"
@@ -119,7 +116,7 @@
               alt=""
               class="md:flex hidden md:h-[100px]"
             />
-            <h3 class="text-[24px] font-[500] md:text-center">HTML5</h3>
+            <h3 class="text-left text-[24px] font-[500] md:text-center">HTML5</h3>
           </div>
           <div class="flex flex-col items-center">
             <img
@@ -155,22 +152,33 @@
           </div>
         </div>
       </div>
-      <div class="swiper mySwiper w-full">
+      <div class="swiper mySwiper w-full md:mt-10">
+        <h2 class="text-left text-[30px] font-[700] md:text-center">Reviews</h2>
         <div class="swiper-wrapper">
-          <div class="swiper-slide text-center p-6">
-            "Great service!" – Sarah
+          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
+           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
+           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
+           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
           </div>
-          <div class="swiper-slide text-center p-6">
-            "Loved the experience!" – James
+          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
+           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
+           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
+           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
           </div>
-          <div class="swiper-slide text-center p-6">
-            "Highly recommend." – Aisha
+          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
+           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
+           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
+           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+          </div>
+          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
+           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
+           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
+           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </main>
   </body>
-  <script>
-  </script>
+  <script src="script.js"></script>
 </html>
