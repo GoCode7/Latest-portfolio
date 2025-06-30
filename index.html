@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=~, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>My Folio</title>
 </head>
-git<body class="bg-[#ffff] py-5 px-10">
+<body class="bg-[#ffff] py-5 px-10">
     <header class=" md:justify-between md:items-center ">
         <div class="flex justify-between items-center ">
             <div>
-               <h2 class="text-[30px] font-[700] text-[#323232]">Aluko Jesutofunmi</h2>
+               <h2 class="text-[30px] font-[900] text-[#323232] font-[Dancing_Script]">Aluko Jesutofunmi</h2>
             </div>
-          <nav class="flex">
+          <nav class="flex ">
             <div class="hidden md:flex md:gap-5 md:text-[#323232]">
             <div><a href="#" class="text-xl font-[400]">About</a></div>
             <div><a href="#" class="text-xl font-[400]">Projects</a></div>
@@ -33,13 +37,21 @@ git<body class="bg-[#ffff] py-5 px-10">
             <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">Contacts</a></div>
         </div>
     </header>
-    <main class=" justtify-center items-center">
-        <div class="flex justtify-center items-center gap-10">
-            <div>
-                <img src="images/about.jpg" alt="" class="w-[300px] h-[300px] rounded-full object-cover">
+    <main class="py-15 md:py-30">
+        <div class="profile-pic md:flex  md:items-center md:gap-10 md:justify-center">
+            <div class="flex justify-center items-center mb-5">
+                <img src="images/about.jpg" alt="" class="h-[200px] w-[200px] rounded-full object-cover md:w-[300px] md:h-[300px] md:rounded-full md:object-cover">
             </div>
-            <div>
-
+            <div class="info text-center font-[Playfair_Display] text-[#323232] justify-center">
+                 <h2 class="text-[24px] font-[500] md:text-[24px] md:font-[500]">Hello I'm</h2>
+                 <h1 class="text-[40px] font-[500] md:text-[45px] md:font-[700]">Aluko Jesutofunmi</h1>
+                 <h2 class="text-[30px] font-[500] md:text-[34px] md:font-[600]">Frontend Developer</h2>
+                 <button class="px-4 py-1 bg-[#323232] text-[white] mt-4 rounded-full hover:bg-[black]"><a href="">Download CV</a></button>
+                 <button class="px-4 py-1 bg-[#323232] text-[white] mt-4 rounded-full hover:bg-[black]"><a href="">Contact Info</a></button>
+                 <div class="flex justify-center items-center gap-5 mt-4">
+                    <a href=""><img src="images/github.png" alt="" class="w-[24px] h-[24px]"></a>
+                    <a href=""><img src="images/message.png" alt="" class="w-[24px] h-[24px]"></a>
+                 </div>
             </div>
         </div>
     </main>
@@ -52,5 +64,22 @@ git<body class="bg-[#ffff] py-5 px-10">
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
 });
+
+    gsap.from(".info", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      stagger: 0.5,
+      ease: "power3.out"
+    });
+    gsap.from(".profile-pic", {
+      opacity: 0,
+      y: 50,
+      duration: 3,
+      stagger: 0.5,
+      ease: "power3.out"
+    });
+    
+  
 </script>
 </html>
