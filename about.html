@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=~, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>My Folio</title>
+  </head>
+  <body class="bg-[#ffff] py-5 px-10">
+    <header class="md:justify-between md:items-center">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2
+            class="text-[30px] font-[900] text-[#323232] font-[Dancing_Script]"
+          >
+            Aluko Jesutofunmi
+          </h2>
+        </div>
+        <nav class="flex">
+          <div class="hidden md:flex md:gap-5 md:text-[#323232]">
+            <div>
+              <a href="#" class="text-xl font-[400] border-black border-b-3"
+                >About</a
+              >
+            </div>
+            <div><a href="#" class="text-xl font-[400]">Projects</a></div>
+            <div><a href="#" class="text-xl font-[400]">Skills</a></div>
+            <div><a href="#" class="text-xl font-[400]">Contacts</a></div>
+          </div>
+        </nav>
+        <button class="mobile-menu-button md:hidden">
+          <i class="fa fa-bars text-3xl"></i>
+        </button>
+      </div>
+      <div class="mobile-menu hidden text-center w-full">
+        <div class="hover:bg-[#D2B48C] py-1">
+          <a href="" class="text-xl font-[400]">About</a>
+        </div>
+        <div class="hover:bg-[#D2B48C] py-1">
+          <a href="" class="text-xl font-[400]">Projects</a>
+        </div>
+        <div class="hover:bg-[#D2B48C]py-1">
+          <a href="" class="text-xl font-[400]">Skills</a>
+        </div>
+        <div class="hover:bg-[#D2B48C] py-1">
+          <a href="" class="text-xl font-[400]">Contacts</a>
+        </div>
+      </div>
+    </header>
+    <main class="text-[#323232]">
+      <div class="text-center mt-5 mb-5 md:mb-10 md:mt-10">
+        <h1
+          class="font-[Dancing_Script] text-[45px] font-[700] md:text-[70px] md:font-[900]"
+        >
+          About Me
+        </h1>
+      </div>
+      <div
+        class="md:flex md:gap-10 md:w-full md:h-[550px] md:items-center md:bg-[linear-gradient(to_right,_white_85%,_black_0%)]"
+      >
+        <div class="w-full md:w-2/3">
+          <p
+            class="font-[Playfair_Display] text-[20px] font-[500] md:text-[23px] md:font-[400]"
+          >
+            Hi, I’m
+            <span class="md:text-[26px] text-[23px] font-[900]"
+              >Aluko Jesutofunmi</span
+            >, a passionate
+            <span class="md:text-[26px] text-[23px] font-[900]">Frontend</span>
+            Developer dedicated to crafting engaging, responsive, and accessible
+            web experiences. I specialize in turning creative ideas into
+            interactive interfaces using modern tools like
+            <span class="md:text-[26px] text-[23px] font-[900]"
+              >HTML, CSS, JavaScript, React, and Tailwind CSS</span
+            >. With a strong eye for design and a focus on
+            <span class="md:text-[26px] text-[23px] font-[900]"
+              >user experience</span
+            >, I bring concepts to life through clean code, smooth animations,
+            and mobile-first development. Whether it's building fast-loading
+            websites or integrating APIs, I enjoy every step of the process—from
+            wireframes to deployment. I’m constantly learning and staying
+            updated with the latest trends in web development and UI/UX. My goal
+            is to build digital products that not only look great but also solve
+            real-world problems. When I’m not coding, I enjoy exploring design
+            systems, contributing to open source, and helping others grow in
+            tech.
+          </p>
+        </div>
+        <div class="hidden md:flex">
+          <img src="images/hero-1.jpg" alt="" class="h-[400px]" />
+        </div>
+      </div>
+      <div class="my-skills mt-5 md:mt-10 bg-[white] md:p-5 md:text-center">
+        <h2 class="text-[30px] font-[700] mb-5">My Skills</h2>
+        <div
+          class="md:grid md:grid-cols-5 md:gap-10 md:text-center md:justify-center md:items-center"
+        >
+          <div class="flex flex-col items-center">
+            <img
+              src="images/html.jpg"
+              alt=""
+              class="md:flex hidden md:h-[100px]"
+            />
+            <h3 class="text-[24px] font-[500] md:text-center">HTML5</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="images/creative-css3-tutorials.jpg"
+              alt=""
+              class="md:flex md:w-[165px] hidden md:h-[100px]"
+            />
+            <h3 class="text-[24px] font-[500] md:text-center">CSS</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="images/javascript.jpg"
+              alt=""
+              class="md:flex md:w-[140px] hidden md:h-[100px]"
+            />
+            <h3 class="text-[24px] font-[500] md:text-center">JavaScript</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="images/react.jpg"
+              alt=""
+              class="md:flex hidden md:h-[100px]"
+            />
+            <h3 class="text-[24px] font-[500] md:text-center">React</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="images/tailwind1.jpg"
+              alt=""
+              class="md:flex md:w-[140px] hidden md:h-[100px]"
+            />
+            <h3 class="text-[24px] font-[500] md:text-center">Tailwind</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper mySwiper w-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center p-6">
+            "Great service!" – Sarah
+          </div>
+          <div class="swiper-slide text-center p-6">
+            "Loved the experience!" – James
+          </div>
+          <div class="swiper-slide text-center p-6">
+            "Highly recommend." – Aisha
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+  </body>
+  <script>
+  </script>
+</html>

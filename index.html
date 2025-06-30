@@ -20,7 +20,7 @@
             </div>
           <nav class="flex ">
             <div class="hidden md:flex md:gap-5 md:text-[#323232]">
-            <div><a href="#" class="text-xl font-[400]">About</a></div>
+            <div><a href="about.html" class="text-xl font-[400]">About</a></div>
             <div><a href="#" class="text-xl font-[400]">Projects</a></div>
             <div><a href="#" class="text-xl font-[400]">Skills</a></div>
             <div><a href="#" class="text-xl font-[400]">Contacts</a></div>
@@ -31,15 +31,15 @@
         </button>
         </div>
         <div class="mobile-menu hidden text-center w-full"> 
-            <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">About</a></div>
+            <div class="hover:bg-[#D2B48C] py-1"><a href="about.html" class="text-xl font-[400]">About</a></div>
             <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">Projects</a></div>
             <div class="hover:bg-[#D2B48C]py-1"><a href="" class="text-xl font-[400]">Skills</a></div>
             <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">Contacts</a></div>
         </div>
     </header>
     <main class="py-15 md:py-30">
-        <div class="profile-pic md:flex  md:items-center md:gap-10 md:justify-center">
-            <div class="flex justify-center items-center mb-5">
+        <div class=" md:flex  md:items-center md:gap-10 md:justify-center">
+            <div class=" profile-pic flex justify-center items-center mb-5">
                 <img src="images/about.jpg" alt="" class="h-[200px] w-[200px] rounded-full object-cover md:w-[300px] md:h-[300px] md:rounded-full md:object-cover">
             </div>
             <div class="info text-center font-[Playfair_Display] text-[#323232] justify-center">
@@ -57,29 +57,5 @@
     </main>
     
 </body>
-<script>
-    const btn = document.querySelector('.mobile-menu-button');
-    const menu = document.querySelector('.mobile-menu');
-
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-});
-
-    gsap.from(".info", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      stagger: 0.5,
-      ease: "power3.out"
-    });
-    gsap.from(".profile-pic", {
-      opacity: 0,
-      y: 50,
-      duration: 3,
-      stagger: 0.5,
-      ease: "power3.out"
-    });
-    
-  
-</script>
+<scrip src="script.js"></script>
 </html>
