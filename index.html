@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>My Folio</title>
+</head>
+git<body class="bg-[#ffff] py-5 px-10">
+    <header class=" md:justify-between md:items-center ">
+        <div class="flex justify-between items-center ">
+            <div>
+               <h2 class="text-[30px] font-[700] text-[#323232]">Aluko Jesutofunmi</h2>
+            </div>
+          <nav class="flex">
+            <div class="hidden md:flex md:gap-5 md:text-[#323232]">
+            <div><a href="#" class="text-xl font-[400]">About</a></div>
+            <div><a href="#" class="text-xl font-[400]">Projects</a></div>
+            <div><a href="#" class="text-xl font-[400]">Skills</a></div>
+            <div><a href="#" class="text-xl font-[400]">Contacts</a></div>
+            </div>
+          </nav>
+         <button class="mobile-menu-button md:hidden ">
+            <i class="fa fa-bars text-3xl"></i>
+        </button>
+        </div>
+        <div class="mobile-menu hidden text-center w-full"> 
+            <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">About</a></div>
+            <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">Projects</a></div>
+            <div class="hover:bg-[#D2B48C]py-1"><a href="" class="text-xl font-[400]">Skills</a></div>
+            <div class="hover:bg-[#D2B48C] py-1"><a href="" class="text-xl font-[400]">Contacts</a></div>
+        </div>
+    </header>
+    <main class=" justtify-center items-center">
+        <div class="flex justtify-center items-center gap-10">
+            <div>
+                <img src="images/about.jpg" alt="" class="w-[300px] h-[300px] rounded-full object-cover">
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script>
+    const btn = document.querySelector('.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+});
+</script>
+</html>
