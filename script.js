@@ -33,3 +33,46 @@ const btn = document.querySelector('.mobile-menu-button');
         el: ".swiper-pagination",
       },
     });
+
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.create({
+      trigger: ".my-skills",
+      start: "top 100%",
+      onEnter: () => animateBox(),
+      onEnterBack: () => animateBox(),
+      onLeave: () => resetBox(),
+      onLeaveBack: () => resetBox(),
+    });
+
+    function animateBox() {
+      gsap.fromTo(".my-skills",
+        { y: 100, opacity: 0},
+        { y: 0, opacity: 1, duration: 4, ease: "power4.out" }
+      );
+    }
+
+    function resetBox() {
+      gsap.set(".my-skills", { y: 100, opacity: 0 });
+    }
+
+    // ScrollTrigger.create({
+    //   trigger: ".content",
+    //   start: "top 100%",
+    //   onEnter: () => anmateBox(),
+    //   onEnterBack: () => anmateBox(),
+    //   onLeave: () => resetBox(),
+    //   onLeaveBack: () => resetBox(),
+    // });
+
+    // function anmateBox() {
+    //   gsap.fromTo(".content",
+    //     { y: 100, opacity: 0 },
+    //     { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    //   );
+    // }
+
+    // function resetBox() {
+    //   gsap.set(".content", { y: 100, opacity: 0 });
+    // }
+
+    

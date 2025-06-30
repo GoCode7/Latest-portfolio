@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center md:bg-[gray] md:w-[900px] md:rounded-full">
-        <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
-        <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
-         <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+<head>
+  <meta charset="UTF-8">
+  <title>GSAP Scroll Repeat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    .box {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Dummy spacer -->
+  <section class="h-screen flex items-center justify-center text-3xl">
+    Scroll Down 👇
+  </section>
+
+  <!-- Animated box -->
+  <section class="h-screen flex items-center justify-center">
+    <div class="box bg-purple-600 p-10 rounded-xl text-2xl shadow-lg">
+      I Animate Every Time You Scroll!
     </div>
-  </body>
+  </section>
+
+  <!-- Another spacer -->
+  <section class="h-screen flex items-center justify-center text-3xl">
+    Scroll Up ⬆️ to see it again!
+  </section>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      trigger: ".box",
+      start: "top 80%",
+      onEnter: () => animateBox(),
+      onEnterBack: () => animateBox(),
+      onLeave: () => resetBox(),
+      onLeaveBack: () => resetBox(),
+    });
+
+    function animateBox() {
+      gsap.fromTo(".box",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      );
+    }
+
+    function resetBox() {
+      gsap.set(".box", { y: 100, opacity: 0 });
+    }
+  </script>
+<!-- gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.create({
+      trigger: ".my-skills",
+      start: "top 80%",
+      onEnter: () => animateBox(),
+      onEnterBack: () => animateBox(),
+      onLeave: () => resetBox(),
+      onLeaveBack: () => resetBox(),
+    });
+
+    function animateBox() {
+      gsap.fromTo(".my-skills",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      );
+    }
+
+    function resetBox() {
+      gsap.set(".my-skills", { y: 100, opacity: 0 });
+    } -->
+</body>
 </html>
