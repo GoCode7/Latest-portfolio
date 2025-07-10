@@ -1,10 +1,15 @@
 //mobile menu toggle functionality
 const btn = document.querySelector('.mobile-menu-button');
     const menu = document.querySelector('.mobile-menu');
+    const closebtn = document.querySelector('.closeMenu');
 
     btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+        menu.classList.remove('-translate-x-full');
 });
+    closebtn.addEventListener('click', () => {
+      menu.classList.add('-translate-x-full')
+    })
+
 
 // GSAP animations for the about page
     gsap.from(".info", {

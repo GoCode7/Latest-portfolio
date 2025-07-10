@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=~, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>My Folio</title>
   </head>
-  <body class="bg-[#ffff] py-5 px-10 text-[#323232]">
+  <body class="bg-[white] py-5 px-10 text-[#323232]">
     <header class="md:justify-between md:items-center">
       <div class="flex justify-between items-center">
         <div>
@@ -33,17 +41,13 @@
         <nav class="flex">
           <div class="hidden md:flex md:gap-5">
             <div>
-              <a
-                href="about.html"
-                class="text-xl font-[400] border-black border-b-3"
+              <a href="about.html" class="text-xl font-[400] border-black border-b-3"
                 >About</a
               >
             </div>
             <div><a href="#" class="text-xl font-[400]">Projects</a></div>
             <div><a href="#skills" class="text-xl font-[400]">Skills</a></div>
-            <div>
-              <a href="Contact.html" class="text-xl font-[400]">Contacts</a>
-            </div>
+            <div><a href="Contact.html" class="text-xl font-[400]">Contacts</a></div>
           </div>
         </nav>
         <button class="mobile-menu-button md:hidden">
@@ -64,7 +68,7 @@
               class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
             >
               <a href="about.html" class="text-xl font-[400]">About</a>
-            </div>
+          </div>
             <div
               class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
             >
@@ -83,52 +87,23 @@
           </div>
           <div>
             <div>
-              <h2 class="font-[Dancing_Script] text-[20px]">
-                Aluko Jesutofunmi
-              </h2>
+              <h2 class="font-[Dancing_Script] text-[20px]">Aluko Jesutofunmi</h2>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="py-15 md:py-30">
-      <div class="md:flex md:items-center md:gap-10 md:justify-center">
-        <div class="profile-pic flex justify-center items-center mb-5">
-          <img
-            src="images/about.jpg"
-            alt=""
-            class="h-[200px] w-[200px] rounded-full object-cover md:w-[300px] md:h-[300px] md:rounded-full md:object-cover"
-          />
+    <main>
+        <div>
+            <p>My Skills</p>
+        <div>
+        <h2>Coding Skills</h2>
+        <div></div>
         </div>
-        <div class="info text-center font-[Playfair_Display] justify-center">
-          <h2 class="text-[24px] font-[500] md:text-[24px] md:font-[500]">
-            Hello I'm
-          </h2>
-          <h1 class="text-[40px] font-[500] md:text-[45px] md:font-[700]">
-            Aluko Jesutofunmi
-          </h1>
-          <h2 class="text-[30px] font-[500] md:text-[34px] md:font-[600]">
-            Frontend Developer
-          </h2>
-          <button
-            class="px-4 py-1 bg-[#f9ba32] text-[white] mt-4 rounded-full hover:bg-[black]"
-          >
-            <a href="">Download CV</a>
-          </button>
-          <button
-            class="px-4 py-1 bg-[#f9ba32] text-[white] mt-4 rounded-full hover:bg-[black]"
-          >
-            <a href="">Contact Info</a>
-          </button>
-          <div class="flex justify-center items-center gap-5 mt-4 text-[28px]">
-            <a href=""><i class="fab fa-whatsapp"></i></a>
-            <a href=""><i class="fab fa-slack"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
+      <div></div>
       </div>
+        </div>
+      
     </main>
   </body>
   <script src="script.js"></script>

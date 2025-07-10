@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,55 +26,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>My Folio</title>
   </head>
-  <body class="bg-[#ffff] py-5 px-10 text-[#323232]">
+  <body class="bg-[white] py-5 px-10 text-[#323232]">
     <header class="md:justify-between md:items-center">
       <div class="flex justify-between items-center">
         <div>
-          <h2><a href="index.html" class="text-[30px] font-[900] font-[Dancing_Script]">Aluko Jesutofunmi</a></h2>
+          <h2>
+            <a
+              href="index.html"
+              class="text-[30px] font-[900] font-[Dancing_Script]"
+              >Aluko Jesutofunmi</a
+            >
+          </h2>
         </div>
         <nav class="flex">
           <div class="hidden md:flex md:gap-5">
             <div>
-              <a href="#" class="text-xl font-[400] border-black border-b-3"
+              <a href="about.html" class="text-xl font-[400] border-black border-b-3"
                 >About</a
               >
             </div>
             <div><a href="#" class="text-xl font-[400]">Projects</a></div>
             <div><a href="#skills" class="text-xl font-[400]">Skills</a></div>
-            <div><a href="#" class="text-xl font-[400]">Contacts</a></div>
+            <div><a href="Contact.html" class="text-xl font-[400]">Contacts</a></div>
           </div>
         </nav>
         <button class="mobile-menu-button md:hidden">
           <i class="fa fa-bars text-3xl"></i>
         </button>
       </div>
-      <div class="mobile-menu hidden text-center w-full">
-        <div class="hover:bg-[#D2B48C] py-1">
-          <a href="" class="text-xl font-[400]">About</a>
+      <div
+        class="mobile-menu md:hidden fixed top-0 left-0 h-full w-[50%] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadoww-lg bg-[#f9ba32]"
+      >
+        <div class="p-4 flex justify-end">
+          <button class="closeMenu">
+            <i class="fa fa-times text-2xl"></i>
+          </button>
         </div>
-        <div class="hover:bg-[#D2B48C] py-1">
-          <a href="" class="text-xl font-[400]">Projects</a>
-        </div>
-        <div class="hover:bg-[#D2B48C]py-1">
-          <a href="" class="text-xl font-[400]">Skills</a>
-        </div>
-        <div class="hover:bg-[#D2B48C] py-1">
-          <a href="" class="text-xl font-[400]">Contacts</a>
+        <div class="flex-col flex px-2 space-y-5 gap-83">
+          <div>
+            <div
+              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
+            >
+              <a href="about.html" class="text-xl font-[400]">About</a>
+          </div>
+            <div
+              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
+            >
+              <a href="" class="text-xl font-[400]">Projects</a>
+            </div>
+            <div
+              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
+            >
+              <a href="" class="text-xl font-[400]">Skills</a>
+            </div>
+            <div
+              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
+            >
+              <a href="Contact.html" class="text-xl font-[400]">Contacts</a>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2 class="font-[Dancing_Script] text-[20px]">Aluko Jesutofunmi</h2>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <main class="">
       <div class="text-center mt-5 mb-5 md:mb-10 md:mt-10">
         <h1
-          class="about-header font-[Dancing_Script] text-[45px] font-[700] md:text-[70px] md:font-[900]"
+          class="about-header font-[Dancing_Script] text-[45px] font-[700] md:text-[70px] md:font-[900] shadow-lg"
         >
           About Me
         </h1>
       </div>
       <div
-        class=" md:flex md:gap-10 md:w-full md:h-[550px] md:items-center md:bg-[linear-gradient(to_right,_white_85%,_black_0%)]"
+        class="md:flex md:gap-10 md:w-full md:h-[550px] md:items-center md:bg-[linear-gradient(to_right,_white_85%,_black_0%)]"
       >
-        <div class=" w-full md:w-2/3">
+        <div class="w-full md:w-2/3">
           <p
             class="content font-[Playfair_Display] text-[20px] font-[500] md:text-[23px] md:font-[400]"
           >
@@ -106,77 +137,119 @@
         </div>
       </div>
       <div id="#skills">
-        <div class="my-skills mt-5 md:mt-10 bg-[white] md:p-5 md:text-center">
-        <h2 class="text-[30px] font-[700] mb-5">My Skills</h2>
         <div
-          class="md:grid md:grid-cols-5 md:gap-10 md:text-center md:justify-center md:items-center"
+          class="my-skills mt-5 md:mt-10 md:bg-gray-100 md:rounded-[60px] md:p-5 md:text-center"
         >
-          <div class="flex flex-col items-center">
-            <img
-              src="images/html.jpg"
-              alt=""
-              class="md:flex hidden md:h-[100px]"
-            />
-            <h3 class="text-left text-[24px] font-[500] md:text-center">HTML5</h3>
-          </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="images/creative-css3-tutorials.jpg"
-              alt=""
-              class="md:flex md:w-[165px] hidden md:h-[100px]"
-            />
-            <h3 class="text-[24px] font-[500] md:text-center">CSS</h3>
-          </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="images/javascript.jpg"
-              alt=""
-              class="md:flex md:w-[140px] hidden md:h-[100px]"
-            />
-            <h3 class="text-[24px] font-[500] md:text-center">JavaScript</h3>
-          </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="images/react.jpg"
-              alt=""
-              class="md:flex hidden md:h-[100px]"
-            />
-            <h3 class="text-[24px] font-[500] md:text-center">React</h3>
-          </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="images/tailwind1.jpg"
-              alt=""
-              class="md:flex md:w-[140px] hidden md:h-[100px]"
-            />
-            <h3 class="text-[24px] font-[500] md:text-center">Tailwind</h3>
+          <h2 class="text-[30px] font-[700] mb-5">My Skills</h2>
+          <div
+            class="md:grid md:grid-cols-5 md:gap-10 md:text-center md:justify-center md:items-center"
+          >
+            <div class="flex flex-col items-center">
+              <img
+                src="images/html.jpg"
+                alt=""
+                class="md:flex hidden md:h-[100px]"
+              />
+              <h3 class="text-[24px] font-[500] md:text-center">HTML5</h3>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="images/creative-css3-tutorials.jpg"
+                alt=""
+                class="md:flex md:w-[165px] hidden md:h-[100px]"
+              />
+              <h3 class="text-[24px] font-[500] md:text-center">CSS</h3>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="images/javascript.jpg"
+                alt=""
+                class="md:flex md:w-[140px] hidden md:h-[100px]"
+              />
+              <h3 class="text-[24px] font-[500] md:text-center">JavaScript</h3>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="images/react.jpg"
+                alt=""
+                class="md:flex hidden md:h-[100px]"
+              />
+              <h3 class="text-[24px] font-[500] md:text-center">React</h3>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="images/tailwind1.jpg"
+                alt=""
+                class="md:flex md:w-[140px] hidden md:h-[100px]"
+              />
+              <h3 class="text-[24px] font-[500] md:text-center">Tailwind</h3>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
+
       <div class="swiper mySwiper w-full md:mt-10">
         <h2 class="text-left text-[30px] font-[700] md:text-center">Reviews</h2>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
-           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
-           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
-           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+        <div class="swiper-wrapper items-center">
+          <div
+            class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center"
+          >
+            <img
+              src="images/boy.jpg"
+              alt=""
+              class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center"
+            />
+            <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">
+              "Great service! strongly recommend"
+            </h2>
+            <h3 class="font-[600] text-[20px] md:text-[28px]">
+              Akinbayode Olufunke
+            </h3>
           </div>
-          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
-           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
-           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
-           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+          <div
+            class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center"
+          >
+            <img
+              src="images/boy.jpg"
+              alt=""
+              class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center"
+            />
+            <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">
+              "Great service! strongly recommend"
+            </h2>
+            <h3 class="font-[600] text-[20px] md:text-[28px]">
+              Akinbayode Olufunke
+            </h3>
           </div>
-          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
-           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
-           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
-           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+          <div
+            class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center"
+          >
+            <img
+              src="images/boy.jpg"
+              alt=""
+              class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center"
+            />
+            <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">
+              "Great service! strongly recommend"
+            </h2>
+            <h3 class="font-[600] text-[20px] md:text-[28px]">
+              Akinbayode Olufunke
+            </h3>
           </div>
-          <div class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center  md:w-[900px]">
-           <img src="images/boy.jpg" alt="" class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center">
-           <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">"Great service! strongly recommend"</h2>
-           <h3 class="font-[600] text-[20px] md:text-[28px]">Akinbayode Olufunke</h3>
+          <div
+            class="swiper-slide text-center p-5 md:p-6 md:justify-center md:items-center"
+          >
+            <img
+              src="images/boy.jpg"
+              alt=""
+              class="mx-auto w-[100px] h-[100px] rounded-full md:rounded-full md:object-cover md:w-[100px] md:h-[100px] md:items-center md:justify-center"
+            />
+            <h2 class="font-[Dancing_Script] text-[24px] md:text-[32px]">
+              "Great service! strongly recommend"
+            </h2>
+            <h3 class="font-[600] text-[20px] md:text-[28px]">
+              Akinbayode Olufunke
+            </h3>
           </div>
         </div>
         <div class="swiper-pagination"></div>

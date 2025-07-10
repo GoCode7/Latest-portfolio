@@ -2,78 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GSAP Scroll Repeat</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <style>
-    .box {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Document</title>
 </head>
-<body class="bg-gray-900 text-white">
-
-  <!-- Dummy spacer -->
-  <section class="h-screen flex items-center justify-center text-3xl">
-    Scroll Down 👇
-  </section>
-
-  <!-- Animated box -->
-  <section class="h-screen flex items-center justify-center">
-    <div class="box bg-purple-600 p-10 rounded-xl text-2xl shadow-lg">
-      I Animate Every Time You Scroll!
-    </div>
-  </section>
-
-  <!-- Another spacer -->
-  <section class="h-screen flex items-center justify-center text-3xl">
-    Scroll Up ⬆️ to see it again!
-  </section>
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    ScrollTrigger.create({
-      trigger: ".box",
-      start: "top 80%",
-      onEnter: () => animateBox(),
-      onEnterBack: () => animateBox(),
-      onLeave: () => resetBox(),
-      onLeaveBack: () => resetBox(),
-    });
-
-    function animateBox() {
-      gsap.fromTo(".box",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
-      );
-    }
-
-    function resetBox() {
-      gsap.set(".box", { y: 100, opacity: 0 });
-    }
-  </script>
-<!-- gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.create({
-      trigger: ".my-skills",
-      start: "top 80%",
-      onEnter: () => animateBox(),
-      onEnterBack: () => animateBox(),
-      onLeave: () => resetBox(),
-      onLeaveBack: () => resetBox(),
-    });
-
-    function animateBox() {
-      gsap.fromTo(".my-skills",
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
-      );
-    }
-
-    function resetBox() {
-      gsap.set(".my-skills", { y: 100, opacity: 0 });
-    } -->
+<body>
+  <div class="mt-50 flex col-3 gap-10">
+  <div class="h-40 bg-blue-100 w-20 py-3 px-3 rounded-t-full hover:h-50">
+    <img src="images/html.jpg" alt="" class="h-20 w-20 object-cover rounded-full">
+  </div>
+  <div class="h-40 bg-blue-100 w-20 py-3 px-3 rounded-t-full hover:h-50">
+    <img src="images/html.jpg" alt="" class="h-20 w-20 object-cover rounded-full">
+  </div>
+  <div class="h-40 bg-blue-100 w-20 py-3 px-3 rounded-t-full hover:h-50">
+    <img src="images/html.jpg" alt="" class="h-20 w-20 object-cover rounded-full">
+  </div>
+  <div class="h-40 bg-blue-100 w-20 py-3 px-3 rounded-t-full hover:h-50">
+    <img src="images/html.jpg" alt="" class="h-20 w-20 object-cover rounded-full">
+  </div>
+  <div class="h-40 bg-blue-100 w-20 py-3 px-3 rounded-t-full hover:h-50">
+    <img src="images/html.jpg" alt="" class="h-20 w-20 object-cover rounded-full">
+  </div>
+</div>
 </body>
 </html>
