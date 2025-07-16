@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=~, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,12 +20,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>My Folio</title>
   </head>
-  <body class="bg-[white] py-5 px-10 text-[#323232]">
+  <body class="bg-[white] py-5 px-5 md:px-10 text-[#323232]">
     <header class="md:justify-between md:items-center">
       <div class="flex justify-between items-center">
         <div>
@@ -39,21 +37,12 @@
         </div>
         <nav class="flex">
           <div class="hidden md:flex md:gap-5">
-            <div>
-              <a href="about.html" class="text-xl font-[400]">About</a>
-            </div>
+            <div><a href="about.html" class="text-xl font-[400]">About</a></div>
             <div><a href="#" class="text-xl font-[400]">Projects</a></div>
-            <div><a href="#skills" class="text-xl font-[400]">Skills</a></div>
+            <div><a href="skills.html" class="text-xl font-[400]">Skills</a></div>
             <div>
-              <a
-                href="Contact.html"
-                class="text-xl font-[400] border-black border-b-3"
-              >
-                <img
-                  src="images/about.jpg"
-                  alt=""
-                  class="rounded-full w-10 h-10 object-cover"
-                />
+              <a href="Contact.html" class="text-xl font-[400] border-black border-b-3">
+                <img src="images/about.jpg" alt="" class="rounded-full w-10 h-10 object-cover" />
               </a>
             </div>
           </div>
@@ -71,31 +60,23 @@
           </button>
         </div>
         <div class="flex-col flex px-2 space-y-4 gap-81">
-          <div class="">
-            <div
-              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1"
-            >
+          <div>
+            <div class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1">
               <a href="about.html" class="text-xl font-[400]">About</a>
             </div>
-            <div
-              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1"
-            >
+            <div class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1">
               <a href="" class="text-xl font-[400]">Projects</a>
             </div>
-            <div
-              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1"
-            >
-              <a href="" class="text-xl font-[400]">Skills</a>
+            <div class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1 mb-1">
+              <a href="skills.html" class="text-xl font-[400]">Skills</a>
             </div>
-            <div
-              class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1"
-            >
+            <div class="hover:border-3 hover:w-full hover:px-2 hover:rounded-[10px] py-1">
               <a href="Contact.html" class="text-xl font-[400]">Contacts</a>
             </div>
           </div>
           <div>
             <div>
-              <h2 class="font-[Dancing_Script] font-[7 00] text-[20px]">
+              <h2 class="font-[Dancing_Script] font-[700] text-[20px]">
                 Aluko Jesutofunmi
               </h2>
             </div>
@@ -103,22 +84,24 @@
         </div>
       </div>
     </header>
+
     <main>
-      <div class="flex gap-10 items-center">
-        <div class="mt-20 w-2/3">
-          <div class="leading-[70px]">
-            <h1 class="text-[70px] font-[600]">
-              Lets start a <br />
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <!-- FORM SECTION -->
+        <div class="mt-10 md:mt-20 w-full md:w-2/3 gsap-form">
+          <div class="leading-[50px] md:leading-[70px]">
+            <h1 class="text-[36px] md:text-[70px] font-[600]">
+              Let's start a <br />
               project together
             </h1>
           </div>
-          <form action="/action_page.php" class="mt-30 text-[28px]">
+          <form action="/action_page.php" class="mt-10 md:mt-30 text-[20px] md:text-[28px]">
             <div class="border-b-3 border-t-3 py-3">
-              <label for="name" class="">What's your name?</label><br />
+              <label for="name">What's your name?</label><br />
               <input
                 type="text"
                 placeholder="Firstname Lastname"
-                class="text-[24px] py-2 pl-3 w-full"
+                class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
             </div>
             <div class="border-b-3 py-3">
@@ -126,57 +109,62 @@
               <input
                 type="text"
                 placeholder="name@gmail.com"
-                class="text-[24px] py-2 pl-3 w-full"
+                class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
             </div>
             <div class="border-b-3 py-3">
-              <label for="name">What's the name of your organization?</label
-              ><br />
+              <label for="organization">Organization name?</label><br />
               <input
                 type="text"
                 placeholder="JOADEB Plc"
-                class="text-[24px] py-2 pl-3 w-full"
+                class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
             </div>
             <div class="border-b-3 py-3">
-              <label for="services">What services are you looking ?</label
-              ><br />
-              <input type="text" placeholder="Web development" />
+              <label for="services">Services you're looking for?</label><br />
+              <input
+                type="text"
+                placeholder="Web development"
+                class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
+              />
             </div>
             <div class="border-b-3 py-3">
               <label for="message">Your message?</label><br />
               <input
                 type="text"
                 placeholder="Message"
-                class="text-[24px] py-2 pl-3 w-full"
+                class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
             </div>
-
-            <input type="submit" class="" />
+            <input
+              type="submit"
+              class="mt-4 px-6 py-2 bg-[#323232] text-white rounded-full hover:bg-black cursor-pointer justify-center flex items-center mx-auto"
+            />
           </form>
         </div>
-        <div>
-          <div class="mb-10">
+
+        <!-- CONTACT SECTION -->
+        <div class="w-full md:w-auto flex flex-col items-center gsap-contact">
+          <div class="mb-10 flex justify-center gsap-image">
             <img
               src="images/about.jpg"
               alt=""
-              class="rounded-full w-30 h-30 object-cover"
+              class="rounded-full w-24 h-24 md:w-30 md:h-30 object-cover"
             />
           </div>
-          <div></div>
-          <div class="mt-10">
-            <h2 class="font-[700] text-[28px]">Contact Details</h2>
-            <a href="" class="font-[600] text-[24px]"
-              >Alukojesutofunmi01@gmail.com</a
-            ><br />
-            <a href="" class="font-[600] text-[24px]">+234 9133157674</a><br />
+          <div class="mt-10 text-center gsap-info">
+            <h2 class="font-[700] text-[24px] md:text-[28px]">Contact Details</h2>
+            <a href="mailto:Alukojesutofunmi01@gmail.com" class="font-[600] text-[20px] md:text-[24px]">
+              Alukojesutofunmi01@gmail.com</a><br />
+            <a href="tel:+2349133157674" class="font-[600] text-[20px] md:text-[24px]">
+              +234 9133157674</a><br />
           </div>
-          <div class="font-[600] text-[32px] space-x-10">
-            <a href=""><i class="fab fa-whatsapp"></i></a>
-            <a href=""><i class="fab fa-slack"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
+          <div class="font-[600] text-[28px] md:text-[32px] space-x-6 md:space-x-10 mt-4 flex justify-center gsap-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-slack"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
