@@ -95,11 +95,12 @@
               project together
             </h1>
           </div>
-          <form action="/action_page.php" class="mt-10 md:mt-30 text-[20px] md:text-[28px]">
+          <form action="action_page.php" method="POST" class="mt-10 md:mt-30 text-[20px] md:text-[28px]">
             <div class="border-b-3 border-t-3 py-3">
               <label for="name">What's your name?</label><br />
               <input
                 type="text"
+                name="name" required
                 placeholder="Firstname Lastname"
                 class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
@@ -107,7 +108,8 @@
             <div class="border-b-3 py-3">
               <label for="email">What's your email?</label><br />
               <input
-                type="text"
+                type="email"
+                name="email" required
                 placeholder="name@gmail.com"
                 class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
@@ -116,6 +118,7 @@
               <label for="organization">Organization name?</label><br />
               <input
                 type="text"
+                name="organization" required
                 placeholder="JOADEB Plc"
                 class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
@@ -124,6 +127,7 @@
               <label for="services">Services you're looking for?</label><br />
               <input
                 type="text"
+                name="services" required
                 placeholder="Web development"
                 class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
@@ -132,14 +136,15 @@
               <label for="message">Your message?</label><br />
               <input
                 type="text"
+                name="message"
                 placeholder="Message"
                 class="text-[18px] md:text-[24px] py-2 pl-3 w-full"
               />
             </div>
-            <input
+            <button
               type="submit"
               class="mt-4 px-6 py-2 bg-[#323232] text-white rounded-full hover:bg-black cursor-pointer justify-center flex items-center mx-auto"
-            />
+              >Send Message</button>
           </form>
         </div>
 
