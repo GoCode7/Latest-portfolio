@@ -1,4 +1,4 @@
-// Mobile menu toggle functionality
+//mobile menu toggle functionality
 const btn = document.querySelector('.mobile-menu-button');
 const menu = document.querySelector('.mobile-menu');
 const closebtn = document.querySelector('.closeMenu');
@@ -6,10 +6,10 @@ const closebtn = document.querySelector('.closeMenu');
 btn.addEventListener('click', () => {
   menu.classList.remove('-translate-x-full');
 });
-
 closebtn.addEventListener('click', () => {
-  menu.classList.add('-translate-x-full');
-});
+  menu.classList.add('-translate-x-full')
+})
+
 
 // GSAP animations for the about page
 gsap.from(".info", {
@@ -19,7 +19,6 @@ gsap.from(".info", {
   stagger: 0.5,
   ease: "power3.out"
 });
-
 gsap.from(".profile-pic", {
   opacity: 0,
   y: 50,
@@ -28,7 +27,7 @@ gsap.from(".profile-pic", {
   ease: "power3.out"
 });
 
-// Swiper.js initialization for the testimonials slider
+//Swiper.js initialization for the testimonials slider
 new Swiper(".mySwiper", {
   loop: true,
   autoplay: {
@@ -40,10 +39,13 @@ new Swiper(".mySwiper", {
   },
 });
 
+
+
+
 window.addEventListener("load", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Content animation
+  // .content animation
   ScrollTrigger.create({
     trigger: ".content",
     start: "top 80%",
@@ -54,13 +56,18 @@ window.addEventListener("load", function () {
   });
 
   function animateContent() {
-    gsap.fromTo(".content", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power4.out" });
+    gsap.fromTo(
+      ".content",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power4.out" }
+    );
   }
+
   function resetContent() {
     gsap.set(".content", { y: 100, opacity: 0 });
   }
 
-  // About-header animation
+  //.about-header animation
   ScrollTrigger.create({
     trigger: ".about-header",
     start: "top 80%",
@@ -71,13 +78,18 @@ window.addEventListener("load", function () {
   });
 
   function animateAbout() {
-    gsap.fromTo(".about-header", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" });
+    gsap.fromTo(
+      ".about-header",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" }
+    );
   }
+
   function resetAbout() {
     gsap.set(".about-header", { y: 100, opacity: 0 });
   }
 
-  // MySwiper animation
+  //.mySwiper animation
   ScrollTrigger.create({
     trigger: ".mySwiper",
     start: "top 80%",
@@ -88,32 +100,24 @@ window.addEventListener("load", function () {
   });
 
   function animateSwiper() {
-    gsap.fromTo(".mySwiper", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" });
+    gsap.fromTo(
+      ".mySwiper",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" }
+    );
   }
+
   function resetSwiper() {
     gsap.set(".mySwiper", { y: 100, opacity: 0 });
   }
 
-  // My-skills animation
-  ScrollTrigger.create({
-    trigger: ".my-skills",
-    start: "top 80%",
-    onEnter: animateMySkills,
-    onEnterBack: animateMySkills,
-    onLeave: resetMySkills,
-    onLeaveBack: resetMySkills,
-  });
 
-  function animateMySkills() {
-    gsap.fromTo(".my-skills", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: "power4.out" });
-  }
-  function resetMySkills() {
-    gsap.set(".my-skills", { y: 100, opacity: 0 });
-  }
-
-  // Contact section animations
+  // contact section animations
   gsap.from(".gsap-form", {
-    scrollTrigger: { trigger: ".gsap-form", start: "top 80%" },
+    scrollTrigger: {
+      trigger: ".gsap-form",
+      start: "top 80%",
+    },
     opacity: 0,
     y: 80,
     duration: 1.2,
@@ -121,7 +125,10 @@ window.addEventListener("load", function () {
   });
 
   gsap.from(".gsap-image", {
-    scrollTrigger: { trigger: ".gsap-image", start: "top 85%" },
+    scrollTrigger: {
+      trigger: ".gsap-image",
+      start: "top 85%",
+    },
     opacity: 0,
     scale: 0.5,
     duration: 1,
@@ -129,7 +136,10 @@ window.addEventListener("load", function () {
   });
 
   gsap.from(".gsap-info", {
-    scrollTrigger: { trigger: ".gsap-info", start: "top 85%" },
+    scrollTrigger: {
+      trigger: ".gsap-info",
+      start: "top 85%",
+    },
     opacity: 0,
     x: 50,
     duration: 1,
@@ -138,7 +148,10 @@ window.addEventListener("load", function () {
   });
 
   gsap.from(".gsap-icons a", {
-    scrollTrigger: { trigger: ".gsap-icons", start: "top 90%" },
+    scrollTrigger: {
+      trigger: ".gsap-icons",
+      start: "top 90%",
+    },
     opacity: 0,
     x: 50,
     duration: 0.3,
@@ -146,7 +159,6 @@ window.addEventListener("load", function () {
     ease: "power2.out",
   });
 
-  // Skills section
   ScrollTrigger.create({
     trigger: ".Skills",
     start: "top 80%",
@@ -157,13 +169,17 @@ window.addEventListener("load", function () {
   });
 
   function animateSkills() {
-    gsap.fromTo(".Skills", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.9, ease: "power4.out" });
+    gsap.fromTo(
+      ".Skills",
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.9, ease: "power4.out" }
+    );
   }
-  function resetSkills() {
+
+  function Skills() {
     gsap.set(".Skills", { y: 100, opacity: 0 });
   }
 
-  // Knowledge section
   ScrollTrigger.create({
     trigger: ".Knowledge",
     start: "top 80%",
@@ -174,9 +190,15 @@ window.addEventListener("load", function () {
   });
 
   function animateKnowledge() {
-    gsap.fromTo(".Knowledge", { y: 100, opacity: 0 }, { y: 50, opacity: 1, duration: 3, ease: "power4.out" });
+    gsap.fromTo(
+      ".Knowledge",
+      { y: 100, opacity: 0 },
+      { y: 50, opacity: 1, duration: 3, ease: "power4.out" }
+    );
   }
+
   function resetKnowledge() {
     gsap.set(".Knowledge", { y: 100, opacity: 0 });
   }
 });
+
